@@ -1,0 +1,17 @@
+{%extends "base.html" %}
+ {%block title%} Dashboard Page{%endblock%}
+ {%block content%}
+
+
+<h2>Welcome to Dashboard </h2>
+<a href="{{url_for('api.create_product')}}">Add New Products</a>
+
+<br>
+
+<a href="{{url_for('api.get_users')}}"> Get All Users </a>
+<br>
+<a href="{{url_for('api.get_all_products')}}"> Get All Products </a>
+<br>
+
+
+{%endblock%}

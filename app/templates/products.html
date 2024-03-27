@@ -1,0 +1,24 @@
+
+{%extends "base.html" %}
+ {%block title%} Products Page{%endblock%}
+ {%block content%}
+
+<h1>All Products</h1>
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>Name:</strong> {{ product.name }}<br>
+                <strong>Price:</strong> {{ product.price }}<br>
+                <strong>Description:</strong> {{ product.description }}<br>
+                <strong>Quantity:</strong> {{ product.quantity }}<br>
+                {% if product.image_path %}
+                    <img src="{{ product.image_path }}" alt="Product Image"><br>
+                {% else %}
+                    No image available<br>
+                {% endif %}
+                <!-- Add other fields as needed -->
+            </li>
+        {% endfor %}
+    </ul>
+
+{%endblock%}
